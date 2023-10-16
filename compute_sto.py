@@ -91,7 +91,7 @@ def compute_msa(input_fasta_path, msa_output_dir, mode):
         run_jackhmmer(input_fasta_path, uniprot_database_path, uniprot_out_path)
 
       # Run hmmer against seqres
-      pdb_out_path = Path(msa_output_dir) / 'pdb_hits.sto'
+      pdb_out_path = Path(msa_output_dir) / 'hmm_output.sto' # Originally pdb_hits.sto
       if not pdb_out_path.exists() and uniref90_out_path.exists():
         run_hmmsearch(pdb_database_path, pdb_out_path, msa_output_dir)
 
