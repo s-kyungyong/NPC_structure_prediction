@@ -10,11 +10,11 @@ from Bio import SeqIO
 
 # Input/output directories
 target_dir = Path(os.getcwd())
-model_out_dir = Path('/global/scratch/users/skyungyong/NPC/structure')
+model_out_dir = target_dir / 'structure'
 
 # Accessory scripts
-feature = '/global/scratch/users/skyungyong/CO_Yangnan/run_fea_gen.sh'
-af2complex = '/global/scratch/users/skyungyong/CO_Yangnan/af2complex.sh'
+feature = 'generate_feature.sh'
+af2complex = 'af2complex.sh'
 
 def log_message(message):
     """Prints a message with the current time to the console and log file."""
@@ -24,14 +24,14 @@ def log_message(message):
 
 def search_pair():
     # Get all folders
-    records = list(SeqIO.parse("NPC.all.fasta", "fasta"))
+    records = list(SeqIO.parse("NPC.fasta", "fasta"))
     records.sort(key=lambda x: len(x.seq))
 
     targets = [f for f in os.listdir(target_dir) if os.path.isdir(target_dir / f)]
 
     # Iterate each pair, pick pairs that satisfy seqence length limit
     pairs = dict()
-    min_limit, max_limit = 1, 2000
+    min_limit, max_limit = 1, 2500
 
     for i, record in enumerate(records):
         if len(record.seq) <= max_limit:
