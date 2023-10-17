@@ -16,7 +16,7 @@ model_out_dir = Path('/global/scratch/users/skyungyong/CO_Yangnan/NPC/structure'
 
 
 # Accessory scripts
-feature = 'run_fea_gen.sh'
+feature = 'generate_feature.sh'
 
 def log_message(message):
     """Prints a message with the current time to the console and log file."""
