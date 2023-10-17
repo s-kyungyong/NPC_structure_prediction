@@ -63,4 +63,11 @@ python inference.py
 python collect_scores.py
 ```
 
+[NPC_prediction_scores.txt](https://github.com/s-kyungyong/NPC_structure_prediction/blob/main/NPC_prediction_scores.txt) contains the best scores from the five models for each heterodimer complex prediction. 
+### Data visualization
 
+The putative protein-protein interaction network and the prediction confidence scores were initially visualized with R and modified in Illustrator. 
+
+```
+generate_graph.r heatmap.r
+```
