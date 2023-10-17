@@ -3,9 +3,10 @@ import subprocess
 import multiprocessing
 from joblib import Parallel, delayed
 
+# change the path accordingly
 hhblits_binary_path = 'hhblits'
-bfd_database_path = '/global/scratch/users/skyungyong/Software/alphafold-multimer-v2.2.2-080922/Database/bfd/bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt'
-uniclust30_database_path = '/global/scratch/users/skyungyong/Software/alphafold-multimer-v2.2.2-080922/Database/uniclust30/uniclust30_2018_08/uniclust30_2018_08'
+bfd_database_path = '/global/scratch/users/skyungyong/Software/alphafold/Database/bfd/bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt'
+uniclust30_database_path = '/global/scratch/users/skyungyong/Software/alphafold/Database/uniclust30/uniclust30_2018_08/uniclust30_2018_08'
 
 prefix = sys.argv[1]
 
