@@ -46,7 +46,7 @@ def build_msa(item):
           '-maxfilt', str(100000),
           '-min_prefilter_hits', str(1000)]
 
-        for db_path in [bfd_database_path, uniclust30_database_path]:  #[bfd_database_path, uniclust30_database_path]: #bfd_database_path, uniclust30_database_path
+        for db_path in [bfd_database_path, uniclust30_database_path]:  
            cmd.append('-d')
            cmd.append(db_path)
 
